@@ -7,7 +7,14 @@ const {readDuh, validateSchema, aVLNV} = require('duh-core');
 
 const expect = chai.expect;
 
+const lib = require('../lib/index.js');
+
 describe('basic', () => {
+
+  it('lib', async () => {
+    expect(lib).to.be.an('object');
+  });
+
   it('availability', async () => {
     const duh = await readDuh({filename: './test/catalog.json5'});
     await validateSchema(duh);
