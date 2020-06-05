@@ -1,0 +1,12 @@
+{
+  catalog: {
+    vendor: 'sifive', library: 'mem', name: 'catalog', version: '0.1.0',
+    designs: [],
+    components: [
+      {$ref: 'mem1.json5'},
+      {$ref: 'mem1a.json5'},
+      {$ref: 'mem2.json5'},
+      {$ref: 'mem2a.json5'},
+    ]
+  },
+}

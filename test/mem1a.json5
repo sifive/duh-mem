@@ -1,0 +1,40 @@
+{
+  component: {
+    vendor: 'sifive.com', library: 'ark', name: 'mem1', version: '0.1.0',
+    model: {ports: {
+      clk: 1,
+      wren: 1,
+      rden: 1,
+      addr: 16,
+      wrdata: 32,
+      rddata: -32,
+    }},
+    busInterfaces: [{
+      name: 't',
+      interfaceMode: 'slave',
+      busType: {vendor: 'sifive.com', library: 'MEM', name: 'SPRAM', version: '0.1.0'},
+      abstractionTypes: [{
+        viewRef: 'RTLview',
+        portMaps: {
+          CLK: 'clk',
+          WREN: 'wren',
+          RDEN: 'rden',
+          ADDR: 'addr',
+          WRDATA: 'wrdata',
+          RDDATA: 'rddata',
+        },
+      }],
+    }],
+    props: {
+      processNode: 'tsmc28lp',
+      addrWidth: 16,
+      dataWidth: 32,
+      memoryDepth: 0x10000,
+      // estimates
+      frequency: {maximum: 105e6},
+      x: 100,
+      y: 100,
+      banks: 4,
+    }
+  }
+}

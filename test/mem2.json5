@@ -1,0 +1,28 @@
+{
+  component: {
+    vendor: 'sifive.com', library: 'ark', name: 'mem2', version: '0.1.0',
+    model: {ports: {}},
+    busInterfaces: [{
+      name: 'w',
+      interfaceMode: 'slave',
+      busType: {vendor: 'sifive.com', library: 'MEM', name: 'WO', version: '0.1.0'},
+      abstractionTypes: [{
+        viewRef: 'RTLview',
+        portMaps: {},
+      }],
+    }, {
+      name: 'r',
+      interfaceMode: 'slave',
+      busType: {vendor: 'sifive.com', library: 'MEM', name: 'RO', version: '0.1.0'},
+      abstractionTypes: [{
+        viewRef: 'RTLview',
+        portMaps: {},
+      }],
+    }],
+    props: {
+      addrWidth: 16,
+      dataWidth: 32,
+      memoryDepth: 0x10000
+    }
+  }
+}

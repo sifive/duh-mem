@@ -1,0 +1,41 @@
+{
+  component: {
+    vendor: 'sifive.com', library: 'ark', name: 'mem2', version: '0.1.0',
+    model: {ports: {
+      wclk: 1, wren: 1, waddr: 'addrWidth', wrdata: 'dataWidth',
+      rclk: 1, rden: 1, raddr: 'addrWidth', rddata: '-dataWidth',
+    }},
+    busInterfaces: [{
+      name: 'w',
+      interfaceMode: 'slave',
+      busType: {vendor: 'sifive.com', library: 'MEM', name: 'WO', version: '0.1.0'},
+      abstractionTypes: [{
+        viewRef: 'RTLview',
+        portMaps: {
+          CLK: 'wclk',
+          WREN: 'wren',
+          ADDR: 'waddr',
+          WRDATA: 'wrdata'
+        },
+      }],
+    }, {
+      name: 'r',
+      interfaceMode: 'slave',
+      busType: {vendor: 'sifive.com', library: 'MEM', name: 'RO', version: '0.1.0'},
+      abstractionTypes: [{
+        viewRef: 'RTLview',
+        portMaps: {
+          CLK: 'rclk',
+          RDEN: 'rden',
+          ADDR: 'raddr',
+          RDDATA: 'rddata',
+        },
+      }],
+    }],
+    props: {
+      addrWidth: 16,
+      dataWidth: 32,
+      memoryDepth: 0x10000
+    }
+  }
+}
