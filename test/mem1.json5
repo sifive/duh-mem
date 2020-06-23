@@ -14,8 +14,8 @@
     props: {
       processNode: 'tsmc28lp',
       frequency: {minimum: 100e6},
-      addrWidth: 16,
-      dataWidth: 32,
+      addrWidth: 12,
+      dataWidth: 64,
       memoryDepth: 0x10000
     }
   }

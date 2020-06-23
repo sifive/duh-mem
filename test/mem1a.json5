@@ -31,7 +31,7 @@
       dataWidth: 32,
       memoryDepth: 0x10000,
       // estimates
-      frequency: {maximum: 105e6},
+      frequency: {minimum: 100e6, maximum: 105e6},
       x: 100,
       y: 100,
       banks: 4,

@@ -33,6 +33,7 @@
     "nyc": "^15.1.0"
   },
   "dependencies": {
-    "duh-core": "^0.8.3"
+    "duh-core": "^0.8.3",
+    "immutability-helper": "^3.1.1"
   }
 }

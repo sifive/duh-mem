@@ -20,6 +20,7 @@
       }],
     }],
     props: {
+      processNode: 'tsmc28lp',
       addrWidth: 16,
       dataWidth: 32,
       memoryDepth: 0x10000
