@@ -12,7 +12,7 @@
       }],
     }],
     props: {
-      processNode: 'tsmc28lp',
+      processNode: 'sky130',
       frequency: {minimum: 100e6},
       addrWidth: 12,
       dataWidth: 64,

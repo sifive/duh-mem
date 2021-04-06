@@ -20,7 +20,7 @@
       }],
     }],
     props: {
-      processNode: 'tsmc28lp',
+      processNode: 'sky130',
       addrWidth: 16,
       dataWidth: 32,
       memoryDepth: 0x10000

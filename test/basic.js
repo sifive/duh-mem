@@ -11,7 +11,7 @@ const lib = require('../lib/index.js');
 
 const kits = [
   {
-    processNode: 'tsmc28lp',
+    processNode: 'sky130',
 
     getPorts: comp => ({
       clk: 1,
