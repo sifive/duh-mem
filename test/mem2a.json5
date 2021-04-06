@@ -33,10 +33,10 @@
       }],
     }],
     props: {
-      processNode: 'sky130',
-      addrWidth: 16,
-      dataWidth: 32,
-      memoryDepth: 0x10000
+      processNode:  {default: 'sky130'},
+      addrWidth:    {default: 16},
+      dataWidth:    {default: 32},
+      memoryDepth:  {default: 0x10000}
     }
   }
 }

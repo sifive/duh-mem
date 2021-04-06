@@ -12,11 +12,11 @@
       }],
     }],
     props: {
-      processNode: 'sky130',
-      frequency: {minimum: 100e6},
-      addrWidth: 12,
-      dataWidth: 64,
-      memoryDepth: 0x10000
+      processNode:  {default: 'sky130'},
+      frequency:    {minimum: 100e6},
+      addrWidth:    {default: 12},
+      dataWidth:    {default: 64},
+      memoryDepth:  {default: 0x10000}
     }
   }
 }

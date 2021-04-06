@@ -49,9 +49,9 @@ describe('basic', () => {
       await validateSchema(duh1);
       // list all componnets in the catalog
       console.log('component:', aVLNV(duh1.component));
-      const duh2 = lib.negotiator(kits)(duh1);
-      await validateSchema(duh2);
-      console.log(JSON.stringify(duh2, null, 2));
+      // const duh2 = lib.negotiator(kits)(duh1);
+      // await validateSchema(duh2);
+      // console.log(JSON.stringify(duh2, null, 2));
     }
   });
 

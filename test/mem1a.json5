@@ -26,15 +26,15 @@
       }],
     }],
     props: {
-      processNode: 'sky130',
-      addrWidth: 16,
-      dataWidth: 32,
-      memoryDepth: 0x10000,
+      processNode:  {default: 'sky130'},
+      addrWidth:    {default: 16},
+      dataWidth:    {default: 32},
+      memoryDepth:  {default: 0x10000},
       // estimates
-      frequency: {minimum: 100e6, maximum: 105e6},
-      x: 100,
-      y: 100,
-      banks: 4,
+      frequency:    {minimum: 100e6, maximum: 105e6},
+      x:            {default: 100},
+      y:            {default: 100},
+      banks:        {default: 4}
     }
   }
 }
