@@ -1,8 +1,11 @@
+[![NPM version](https://img.shields.io/npm/v/duh-mem.svg)](https://www.npmjs.org/package/duh-mem)
 [![](https://github.com/sifive/duh-mem/workflows/Node%20CI/badge.svg)](https://github.com/sifive/duh-mem/actions)
 
-# duh-mem
-
 DUH memory package
+
+## Install
+
+`npm i duh-mem`
 
 ## CLI
 
