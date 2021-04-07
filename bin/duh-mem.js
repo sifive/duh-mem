@@ -1,14 +1,15 @@
 #!/usr/bin/env node
 'use strict';
 
-const fsPromises = require('fs/promises');
+// const fsPromises = require('fs/promises');
 const yargs = require('yargs');
 const fir = require('../lib/fir');
 
 const handleFir = async opt => {
-  const fname = opt.moduleName + '.v';
+  // const fname = opt.moduleName + '.v';
   const body = fir(opt);
-  await fsPromises.writeFile(fname, body);
+  console.log(body);
+  // await fsPromises.writeFile(fname, body);
 };
 
 yargs
@@ -35,6 +36,11 @@ yargs
         .option('numWritePorts', {
           type: 'number',
           desc: 'number of write ports',
+          require: true
+        })
+        .option('numReadWritePorts', {
+          type: 'number',
+          desc: 'number of read/write ports',
           require: true
         })
         .option('readLatency', {
