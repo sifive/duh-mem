@@ -12,14 +12,15 @@ duh-mem fir
 generate FIRRTLMem
 
 Options:
-      --version        Show version number                             [boolean]
+      --version            Show version number                         [boolean]
   -v, --verbose                                                 [default: false]
-      --help           Show help                                       [boolean]
-      --depth          memory array depth                    [number] [required]
-      --numReadPorts   number of read ports                  [number] [required]
-      --numWritePorts  number of write ports                 [number] [required]
-      --readLatency    read latency                          [number] [required]
-      --writeLatency   write latency                         [number] [required]
-      --width          data port width                       [number] [required]
-      --moduleName     module name                           [string] [required]
+      --help               Show help                                   [boolean]
+      --depth              memory array depth                [number] [required]
+      --numReadPorts       number of read ports              [number] [required]
+      --numWritePorts      number of write ports             [number] [required]
+      --numReadWritePorts  number of read/write ports        [number] [required]
+      --readLatency        read latency                      [number] [required]
+      --writeLatency       write latency                     [number] [required]
+      --width              data port width                   [number] [required]
+      --moduleName         module name                       [string] [required]
 ```
