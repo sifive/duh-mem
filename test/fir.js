@@ -25,12 +25,13 @@ const cases = {
   parameter AW    = 9,
   parameter DEPTH = 300
 ) (
-  input           rw_clock_0,
-  input           rw_en_0,
-  input  [AW-1:0] rw_addr_0,
+  input           rw_clock_0 /* rw0:CLK */,
+  input           rw_en_0    /* rw0:RDEN */,
+  input  [AW-1:0] rw_addr_0  /* rw0:ADDR */,
+  input           rw_wmode_0 /* rw0:WREN */,
   input           rw_wmask_0,
-  input  [DW-1:0] rw_wdata_0,
-  output [DW-1:0] rw_rdata_0
+  input  [DW-1:0] rw_wdata_0 /* rw0:WRDATA */,
+  output [DW-1:0] rw_rdata_0 /* rw0:RDDATA */
 );
 reg [DW-1:0] mem [DEPTH-1:0] /* synthesis syn_ramstyle="no_rw_check" */;
 reg [DW-1:0] rw_rdata_0;
@@ -119,12 +120,13 @@ endmodule // w1
   input           wo_en_0    /* wo0:WREN */,
   input  [AW-1:0] wo_addr_0  /* wo0:ADDR */,
   input  [DW-1:0] wo_data_0  /* wo0:WRDATA */,
-  input           rw_clock_0,
-  input           rw_en_0,
-  input  [AW-1:0] rw_addr_0,
+  input           rw_clock_0 /* rw0:CLK */,
+  input           rw_en_0    /* rw0:RDEN */,
+  input  [AW-1:0] rw_addr_0  /* rw0:ADDR */,
+  input           rw_wmode_0 /* rw0:WREN */,
   input           rw_wmask_0,
-  input  [DW-1:0] rw_wdata_0,
-  output [DW-1:0] rw_rdata_0
+  input  [DW-1:0] rw_wdata_0 /* rw0:WRDATA */,
+  output [DW-1:0] rw_rdata_0 /* rw0:RDDATA */
 );
 reg [DW-1:0] mem [DEPTH-1:0] /* synthesis syn_ramstyle="no_rw_check" */;
 reg [DW-1:0] ro_data_0;
