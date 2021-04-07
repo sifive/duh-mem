@@ -1,15 +1,19 @@
 #!/usr/bin/env node
 'use strict';
 
-// const fsPromises = require('fs/promises');
+const fs = require('fs');
+
 const yargs = require('yargs');
 const fir = require('../lib/fir');
 
 const handleFir = async opt => {
-  // const fname = opt.moduleName + '.v';
+  const fname = opt.moduleName + '.v';
   const body = fir(opt);
-  console.log(body);
-  // await fsPromises.writeFile(fname, body);
+  if (opt.output) {
+    await fs.promises.writeFile(fname, body);
+  } else {
+    console.log(body);
+  }
 };
 
 yargs
@@ -62,6 +66,11 @@ yargs
           type: 'string',
           desc: 'module name',
           require: true
+        })
+        .option('output', {
+          type: 'string',
+          alias: 'o',
+          desc: 'output path'
         });
     }
   })

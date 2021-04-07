@@ -5,7 +5,6 @@ const fs = require('fs');
 const chai = require('chai');
 const lib = require('../lib/index.js');
 
-const fsPromises = fs.promises;
 const expect = chai.expect;
 
 
@@ -137,7 +136,7 @@ describe('fir', () => {
       const result = lib.fir(cases[key].source);
       expect(result).to.eq(cases[key].result);
       const fname = key + '.v';
-      await fsPromises.writeFile(fname, result);
+      await fs.promises.writeFile(fname, result);
     });
   });
 });

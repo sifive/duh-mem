@@ -23,4 +23,5 @@ Options:
       --writeLatency       write latency                     [number] [required]
       --width              data port width                   [number] [required]
       --moduleName         module name                       [string] [required]
+  -o, --output             output path                                  [string]
 ```
