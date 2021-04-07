@@ -1,10 +1,11 @@
 #!/usr/bin/env node
 'use strict';
 
-const fsPromises = require('fs/promises');
+const fs = require('fs');
 const chai = require('chai');
 const lib = require('../lib/index.js');
 
+const fsPromises = fs.promises;
 const expect = chai.expect;
 
 
